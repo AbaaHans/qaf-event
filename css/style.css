@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    background-color: #000;
+    height: 1920px;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(185, 153, 45);
+    position: relative;
+    z-index: -300;
+    background-image: url('../img/bg.jpg');
+    background: url('img/bg.jpg') cover;
+}
+
+.container {
+    padding: 0 60px;
+}
+
+.container img {
+    width: 100%;
+}
