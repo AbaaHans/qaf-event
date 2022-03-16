@@ -2,9 +2,13 @@
 $id = $_GET['id'];
 $page = "";
 
-if ($id == 1) { $page = "Catalogue Matériel"; }
-else if ($id == 2) { $page = "Catalogue Consommable"; }
-elseif ($id == 3) { $page = "Catalogue Nouvauté"; }
+if (isset($_GET['send'])) {
+    $send = 'ok';
+}
+
+if ($id == 1) { $page = "Catalogue Matériels"; }
+else if ($id == 2) { $page = "Catalogue Consommables"; }
+elseif ($id == 3) { $page = "Catalogue Nouvautés"; }
 else { $page = "Menu"; }
 
 include 'header.php'; ?>

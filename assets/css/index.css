@@ -13,10 +13,17 @@ body {
     background-color: #fff;
     background-image: url('../img/bg.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    border-color: #000;
     padding: 0 30px;
     position: relative;
     background-color: #000;
     font-family: Calibri, sans-serif;
+}
+
+.espace {
+    height: 80px;
+    width: 100%;
 }
 
 header {
@@ -24,7 +31,9 @@ header {
 }
 
 .logo {
+    padding-top: 30px;
     width: 500px;
+    margin: 0 auto;
 }
 
 .logo img {
@@ -32,11 +41,31 @@ header {
 }
 
 main {
-    padding-top: 20px;
     display: flex;
 }
 
-main div {
+main div.side {
+    width: 50%;
+}
+
+.btn-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.btn-form button{
+    width: 40%;
+    border-radius: 25%;
+    border: none;
+    box-shadow: 0px 1px 5px #000;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn-form button img {
     width: 50%;
 }
 
@@ -64,6 +93,10 @@ nav ul li p {
     text-align: start;
 }
 
+#nav-nouveaute p{
+    color : #f20404;
+}
+
 nav ul li a {
     display: block;
     width: 100px;
@@ -72,4 +105,334 @@ nav ul li a {
 nav ul li a img {
     width: 100%;
     rotate: 28deg;
+}
+
+.banner {
+    text-align: center;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner a {
+    display: block;
+}
+
+.banner a img {
+    width: 80%;
+    padding: 3px;
+    background: #ffc493;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.nav-banner {
+    position: absolute;
+    top: 67px;
+    right: -47px;
+}
+
+.nav-banner a {
+    display: block;
+    width: 455px;
+}
+
+.miniature {
+    height: 300px;
+    width: 100%;
+    background-image: url('../img/video.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miniature img {
+    width: 20%;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#window {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
+    position: absolute;
+    z-index: 20;
+    background-color: #000;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+}
+
+#window span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+    background-color: red;
+    cursor: pointer;
+}
+
+#window span p {
+    font-size: 38px;
+    color: #fff;
+}
+
+#window video {
+    width: 100%;
+}
+
+/*modal popUp*/
+#open{
+    background-color: #fff;
+border: 0;
+color: #680b00;
+padding: 14px 0px;
+cursor: pointer;
+font-weight: 800;
+width: 25%;
+}
+
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+/*ouvrir le popup*/
+
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal{
+    position: relative;
+    background-color: #fff;
+    width: 800px;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:0 2xp 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal #close, .modal #close_mail {
+    position: absolute;
+    z-index: 10;
+    top: -30px;
+    right: -25px;
+    cursor: pointer;
+}
+
+i{
+    background: red;
+    padding: 7px 15px;
+    border-radius: 50%;
+    float: right;
+    color: #fff;
+    font-size: 23px;
+}
+
+.modal-inner {
+    display: flex;
+}
+
+.img-form {
+    width: 40%;
+}
+
+.img-form img {
+    width: 100%;
+    height: 100%;
+}
+
+.formulaire {
+    width: 60%;
+}
+
+/* Formulaire */
+
+form {
+    background-color: #000;
+    padding: 1rem;
+}
+
+    form > :last-child {
+        margin-bottom: 0;
+    }
+
+    form > .fields {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: calc(100% + 3rem);
+        margin: -1.5rem 0 2rem -1.5rem;
+    }
+
+        form > .fields > .field {
+            -moz-flex-grow: 0;
+            -webkit-flex-grow: 0;
+            -ms-flex-grow: 0;
+            flex-grow: 0;
+            -moz-flex-shrink: 0;
+            -webkit-flex-shrink: 0;
+            -ms-flex-shrink: 0;
+            flex-shrink: 0;
+            padding: 1.5rem 0 0 1.5rem;
+            width: calc(100% - 1.5rem);
+        }
+
+            form > .fields > .field.half {
+                width: calc(50% - 0.75rem);
+            }
+
+            form > .fields > .field.third {
+                width: calc(100%/3 - 0.5rem);
+            }
+
+            form > .fields > .field.quarter {
+                width: calc(25% - 0.375rem);
+            }
+
+    @media screen and (max-width: 480px) {
+
+        form > .fields {
+            width: calc(100% + 3rem);
+            margin: -1.5rem 0 2rem -1.5rem;
+        }
+
+            form > .fields > .field {
+                padding: 1.5rem 0 0 1.5rem;
+                width: calc(100% - 1.5rem);
+            }
+
+                form > .fields > .field.half {
+                    width: calc(100% - 1.5rem);
+                }
+
+                form > .fields > .field.third {
+                    width: calc(100% - 1.5rem);
+                }
+
+                form > .fields > .field.quarter {
+                    width: calc(100% - 1.5rem);
+                }
+
+    }
+
+label {
+    color: #ffffff;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 13px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1rem;
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+}
+
+    input[type="text"]:invalid,
+    
+    input[type="tel"]:invalid,
+    input[type="email"]:invalid {
+        box-shadow: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+   
+    input[type="tel"]:focus{
+        background: rgba(255, 255, 255, 0.075);
+        border-color: #ffffff;
+        box-shadow: 0 0 0 1px #ffffff;
+    }
+.text-danger{
+    color: #e8a930;
+    font-size: 20px;
+}
+
+.alert-danger{
+    margin:10px;
+    padding: 10px;
+    }
+
+.modal button {
+    padding: 5px;
+background: #e8a930;
+border-radius: 5px;
+border-color: transparent;
+color: #6b1616;
+width: 60%;
+font-size: 19px;
+}
+
+
+.mail-modal {
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgba(22, 21, 21, 0.61);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity:1;
+}
+
+.mail-modal .modal {
+    width: 550px;
+    background-color: #d4e3b3;
+    color: green;
+    padding: 30px 45px;
+}
+
+.mail-modal .modal p {
+    font-size: 18px;
 }

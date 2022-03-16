@@ -62,3 +62,14 @@ function valider() {
     document.querySelectorAll("form").submit();
   }
 }
+
+
+// Popup reponse
+let mail_modal = document.querySelector('.mail-modal')
+console.log(mail_modal)
+let close_mail = document.querySelector('#close_mail')
+console.log(close_mail)
+
+close_mail.addEventListener('click', ()=>{
+  mail_modal.style.display = 'none'
+})

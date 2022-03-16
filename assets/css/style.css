@@ -73,14 +73,17 @@ h1 {
 
 /*modal popUp*/
 #open{
-    background-color:#47a386;
+    background-color: #fff;
     border: 0;
-    border-radius: 5px;
-    box-shadow:0 2xp 4px rgba(0, 0, 0, 0.2)  ;
-    color: #fff;
-    padding: 10px 25px;
+    color: #680b00;
+    padding: 8px 17px;
     position: absolute;
     bottom: 0;
+    cursor: pointer;
+    font-weight: 800;
+    width: 10%;
+    right: 03%;
+    font-size: 13px;
 }
 
 .modal-container{
@@ -99,6 +102,30 @@ h1 {
     transition: opacity 0.3s ease;
 }
 
+.btn-form {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7%;
+}
+
+.btn-form button{
+    width: 40%;
+    border-radius: 25%;
+    padding: 34px;
+    border: none;
+    box-shadow: 0px 1px 5px #000;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.btn-form button img {
+    width: 100%;
+}
+
 /*ouvrir le popup*/
 
 .modal-container.show{
@@ -107,29 +134,55 @@ h1 {
 }
 
 .modal{
+    position: relative;
     background-color: #fff;
-    width: 600px;
+    width: 800px;
     max-width: 100%;
-    padding: 30px 50px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow:0 2xp 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
+.modal #close, .modal #close_mail {
+    position: absolute;
+    z-index: 10;
+    top: -30px;
+    right: -25px;
+    cursor: pointer;
+}
+
 i{
-    background: #47a386;
-    padding: 15px;
-    border-radius:5px;
+    background: red;
+    padding: 7px 15px;
+    border-radius: 50%;
     float: right;
     color: #fff;
+    font-size: 23px;
+}
+
+.modal-inner {
+    display: flex;
+}
+
+.img-form {
+    width: 40%;
+}
+
+.img-form img {
+    width: 100%;
+    height: 100%;
+}
+
+.formulaire {
+    width: 60%;
 }
 
 /* Formulaire */
 
 form {
-    margin: 0 0 2rem 0;
-    background: rgba(14, 14, 107, 0.333);
-    padding: 2rem;
+    background-color: #000;
+    padding: 1rem;
 }
 
     form > :last-child {
@@ -205,10 +258,10 @@ label {
     display: block;
     font-size: 0.8rem;
     font-weight: 300;
-    letter-spacing: 0.2rem;
-    line-height: 1.5;
-    margin: 0 0 1rem 0;
+    line-height: 25px;
     text-transform: uppercase;
+    text-align: start;
+    font-size: 13px;
 }
 
 input[type="text"],
@@ -225,7 +278,7 @@ input[type="email"] {
     background-color: transparent;
     border-radius: 4px;
     border: solid 1px #ffffff;
-    color: inherit;
+    color: #fff;
     display: block;
     outline: 0;
     padding: 0 1rem;
@@ -249,11 +302,47 @@ input[type="email"] {
         box-shadow: 0 0 0 1px #ffffff;
     }
 .text-danger{
-    color: red;
-    margin: 10px;
+    color: #e8a930;
+    font-size: 20px;
 }
 
 .alert-danger{
     margin:10px;
     padding: 10px;
     }
+
+.modal button {
+    padding: 5px;
+    background: #e8a930;
+    border-radius: 5px;
+    border-color: transparent;
+    color: #6b1616;
+    width: 60%;
+    font-size: 19px;
+}
+
+.mail-modal {
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgba(22, 21, 21, 0.61);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity:1;
+}
+
+.mail-modal .modal {
+    width: 550px;
+    background-color: #d4e3b3;
+    color: green;
+    padding: 30px 45px;
+}
+
+.mail-modal .modal p {
+    font-size: 18px;
+}
