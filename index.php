@@ -153,7 +153,7 @@
             <p>X</p>
         </span>
 
-        <video controls>
+        <video controls autoplay loop>
 
             <source src="assets/video/Qaf-pub.mp4"
                     type="video/mp4">
